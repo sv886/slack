@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sv886/slack.svg?branch=master)](https://travis-ci.org/sv886/slack)
+
 #Week 8 Lab - Slack
 
 ##Slack: a React and Rails API based chat room
