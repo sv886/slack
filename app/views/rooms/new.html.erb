@@ -1,2 +1,26 @@
-<h1>Rooms#new</h1>
-<p>Find me in app/views/rooms/new.html.erb</p>
+<div class="room_container">
+
+    <h1>Create a Room</h1>
+
+    <% if @room.errors.any? %>
+      <%= pluralize(@room.errors.count, 'error') %> need your attention.
+      <ul class="mdl-list">
+        <% @room.errors.full_messages.each do |msg| %>
+          <li class="mdl-list__item"><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= form_for @room do |f| %>
+      <div class="">
+        <%= f.label :room_name %>
+        <%= f.text_field :room_name %>
+      </div>
+
+      <div class="">
+        <%= f.submit class: "btn btn-success", value: "Create Room" %>
+
+      </div>
+    <% end %>
+
+</div>

@@ -14,6 +14,14 @@
         <%= image_tag "Slack_Icon.png", style:"max-height: 100%;" %>
       <% end %>
     </div>
+    <div class="room_icon">
+      <% if @current_user %>
+          <%= link_to new_room_path, class: "button" do %>
+            <h1>Create Room</h1>
+          <% end %>
+        <% else %>
+      <% end %>
+    </div>
     <div class="session_icon">
       <% if @current_user %>
           <%= link_to logout_path, class: "button" do %>

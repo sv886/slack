@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   # delete 'users#delete'
   #
   root 'rooms#index'
-  # get 'rooms/new'
-  # get 'rooms/create'
+  get 'rooms/new' => 'rooms#new', as: :new_room
+  post 'rooms' => 'rooms#create', as: :rooms
   # get 'rooms/show'
   # get 'rooms/delete'
   #
