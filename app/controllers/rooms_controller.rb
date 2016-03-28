@@ -23,7 +23,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.new
-    @room.room_name = params[:room][:text]
+    @room.room_name = params[:room][:room_name]
     # @room.user = @current_user
     if @room.save
       redirect_to root_path
