@@ -10,15 +10,26 @@ class RoomsController < ApplicationController
   end
 
   def index
+    @rooms = Room.all
   end
 
   def show
+    @room = Room.find_by id: params[:id]
   end
 
   def new
+    @room = Room.new
   end
 
   def create
+    @room = Room.new
+    @room.room_name = params[:room][:text]
+    # @room.user = @current_user
+    if @room.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def delete
