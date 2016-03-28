@@ -6,11 +6,23 @@ class PostsController < ApplicationController
   end
 
   def new
+    # @post = Post.new
   end
 
   def create
+    # @post = Post.new
+    # @post.text = params[:post][:text]
+    # @post.user = @current_user
+    # if @post.save
+    #   redirect_to posts_path
+    # else
+    #   render :new
+    # end
   end
 
   def delete
-  end
+  #   @post = Post.find_by id: params[:id]
+  #   @post.destroy
+  #   redirect_to posts_path
+  # end
 end

@@ -2,3 +2,7 @@
 <p>Find me in app/views/rooms/index.html.erb</p>
 
 <h1><%= @rooms.length %> active rooms</h1>
+
+<% @rooms.each do |room| %>
+  <h1><%= link_to room.room_name, room_path(id: room.id) %></h1>
+<% end %>

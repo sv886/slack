@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    get 'posts' => 'posts#index'
+    post 'posts' => 'posts#create'
+  end
+
   # root 'welcome#index'
 
   get 'login' => 'sessions#new', as: :login
@@ -16,14 +21,8 @@ Rails.application.routes.draw do
   root 'rooms#index'
   get 'rooms/new' => 'rooms#new', as: :new_room
   post 'rooms' => 'rooms#create', as: :rooms
-  # get 'rooms/show'
+  get 'rooms/:id' => 'rooms#show', as: :room
   # get 'rooms/delete'
-  #
-  # get 'posts#index'
-  # get 'posts#new'
-  # post 'posts#create'
-  # get 'posts#show'
-  # delete 'posts#delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

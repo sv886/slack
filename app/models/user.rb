@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 
-  has_secure_password
+  has_many :posts
 
+  has_secure_password
 
   validates :username, :password, presence: true
   attachment :photo
