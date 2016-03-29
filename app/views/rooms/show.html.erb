@@ -1,5 +1,4 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
-<!-- 
-<%= react_compnent 'PostList'%>
-<%= react_compnent 'Formy'%> -->
+<h1>Welcome to <b><%= @room.room_name %></b>, <%= @current_user.username %>.</h1>
+
+<%= react_component 'PostList' %>
+<%= react_component 'Form' %>
