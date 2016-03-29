@@ -16,7 +16,8 @@ class Api::PostsController < ApplicationController
   def create
     @post = Post.new params.require(:post).permit(:text)
     @post.user = @current_user
-    if @post.save
+    @post.room = Room.find_by(params[:id])
+     if @post.save
       render :show
     else
       render json: {errors: @post.errors}, status: 422
