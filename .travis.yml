@@ -13,6 +13,5 @@ deploy:
   app: sv886slack
   on:
     repo: sv886/slack
-    branch: trav
-    run:
+  run:
     - "rake db:migrate"
