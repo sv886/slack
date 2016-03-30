@@ -6,5 +6,6 @@ json.posts @posts do |post|
   json.user do
     json.id post.user.id
     json.username post.user.username
+    json.photo_id post.user.photo_id
   end
 end
