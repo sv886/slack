@@ -1,5 +1,12 @@
 <h1><%= @rooms.length %> active rooms</h1>
 
+<div class="room_icon">
+  <% if @current_user %>
+      <%= link_to "Create Room", new_room_path, class: "button" %>
+    <% else %>
+  <% end %>
+</div>
+
 <% @rooms.each do |room| %>
   <h1><%= link_to room.room_name, room_path(id: room.id) %></h1>
 <% end %>

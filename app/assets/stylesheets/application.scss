@@ -1,19 +1,25 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import 'sessions';
 
 $main_color: #4D394B;
 // $background: #ECF0F1;
 // $accents: #CE1126;
 
-.nav_bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  background-color: $main_color;
-    .slack_icon {
-      padding: 10px 0px;
-      height: 70px;
+body {
+  background-image: url(https://robotsandpencils.com/wp-content/uploads/2015/11/slack.png);
+  background-position: top;
+  background-size: center;
+    .nav_bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      background-color: $main_color;
+        .slack_icon {
+          padding: 10px 0px;
+          height: 70px;
     }
-
+  }
 }
