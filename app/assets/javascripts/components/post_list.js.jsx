@@ -36,7 +36,7 @@ var PostList = React.createClass({
       <h3>Posts</h3>
 
       {this.state.posts.map(function(post){
-        return <blockquote key={post.id}>{post.text}</blockquote>
+        return <blockquote key={post.id}>{post.user.username} says: {post.text}</blockquote>
       })}
     </div>;
   }
