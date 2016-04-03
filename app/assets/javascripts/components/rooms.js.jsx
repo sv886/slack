@@ -1,4 +1,4 @@
-var RoomList = React.createClass({
+var Rooms = React.createClass({
 
   fetchPostsTimer: null,
 
@@ -38,8 +38,8 @@ var RoomList = React.createClass({
     return <div>
       <h3>Posts</h3>
 
-      {this.state.room.map(function(room){
-        return <blockquote key={room.posts.id}>{room.posts.user.username} says: {room.posts.text}</blockquote>
+      {this.state.room.posts.map(function(post){
+        return <blockquote key={post.id}>{post.user.username} says: {post.text}</blockquote>
       })}
     </div>;
   }
