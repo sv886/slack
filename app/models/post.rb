@@ -5,8 +5,4 @@ class Post < ActiveRecord::Base
 
   validates :text, presence: true
 
-  # def self.get_room_id
-  #   self.new.room_id
-  # end
-
 end
