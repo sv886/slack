@@ -15,6 +15,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find_by id: params[:id]
+    @posts = @room.posts
   end
 
   def new
